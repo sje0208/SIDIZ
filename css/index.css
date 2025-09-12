@@ -18,6 +18,12 @@
     font-weight: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'GounBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
 
 @font-face {
     font-family: 'Paperozi';
@@ -45,9 +51,11 @@ body{background-color: rgb(255, 255, 255);}
 
 Header{
   height: 900px;
-  background: url(../image/main2.jpg) no-repeat center/cover fixed; 
+  background: url(../image/07.jpg) no-repeat center/cover fixed; 
   margin: auto;
+  transition: 0.5s;
 }
+Header:hover{background-image: url(../image/06.jpg);}
 
 .utilMenu{
   display: inline-block;
@@ -57,7 +65,8 @@ Header{
   width: 100%;
   height: 100px;
   position: fixed;
-  background-image: linear-gradient(to bottom, rgba(183, 175, 202, 0.5) 0%, rgba(196, 196, 196, 0) 100%);
+  background-color: #fff;
+  z-index: 300;
 }
 
 
@@ -72,7 +81,6 @@ Header{
 
 .logo img{
   width: 150px;
-  flex-direction: flex-start;
   justify-content: center;
   text-align: center;
   margin-left: 70px;
@@ -89,7 +97,7 @@ Header{
   margin: 15px;
   width: 150px;
   height: 60px;
-  color: #fff;
+  color: #b97676;
   text-align: center;
   font-weight: 400;
   overflow: hidden;
@@ -131,23 +139,15 @@ Header{
 .txt{
   display: inline-block;
   flex-direction: column;
-  margin: 200px 30px;
+  margin: 320px;
 }
 .txt h2{
-  font-family: 'Paperozi';
-  font-size: 90px;
-  font-weight: normal;
+  font-family: 'GounBatang';
+  width: max-content;
+  font-size: 100px;
+  font-weight: 400;
   color: #fcfcfc;
   text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.8);
-}
-.txt em{
-  font-family: 'Paperozi';
-  font-size: 90px;
-  font-weight: normal;
-  font-style: normal;
-  color: #ffffff;
-  text-align: left;
-  text-shadow: 5px 5px 4px rgba(0,0,0,0.8);
 }
 
 /* Header Hover Effect */
@@ -163,29 +163,41 @@ Header{
 #s1 h2{
   text-align: center;
   margin-top: 80px;
-  font-size: 30px;
+  font-size: 40px;
   color: rgb(58, 58, 58);
 }
 .content1{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1500px;
-  height: 100%;
-  margin: 0 auto;
+  width: 1300px;
+  height: 800px;
+  margin: 100px auto;
 }
 .item1{
+  margin-top: 100px;
   display: flex;
   justify-items: center;
   align-items: center;
-  flex-direction: column;
-  margin: 50px;
-}
-.item1 img{
-  width: 300px;
-  height: 100%;
   border-radius: 20px;
+  width: 300px;
+  height: 800px;
+  margin: 15px;
+  flex-direction: column;
+}
+.menu{
+  overflow: hidden;
+  border-radius: 20px;
+}
+.menu img{
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
   transition: 0.3s;
+}
+.menu:hover img{
+  transform: scale(1.2);
 }
 .title{
   display: flex;
@@ -319,17 +331,19 @@ Header{
   /* border: 1px solid #000; */
   display: flex;
   flex-direction: column;
+  
 }
 .dis em{
   width: 160px;
   font-style: normal;
   font-size: 25px;
   padding: 0;
+  color: crimson;
   animation: cart 0.8s linear infinite;
 }
 .dis em span:nth-of-type(1){
   font-size: 14px;
-  color: #787f86;
+  color: crimson;
   position: relative;
 }
 .dis em span:nth-of-type(1):before{
@@ -338,7 +352,7 @@ Header{
   left: 0;
   width: 55px;
   position: absolute;
-  border-top: 1px solid #787f86;
+  border-top: 1px solid crimson;
 }
 .dis span{
   font-size: 30px;
@@ -350,13 +364,14 @@ Header{
 }
 .price a{
   display: inline-block;
-  background-color: #000;
+  background-color: #4d4c4c;
   color: #fff;
-  font-size: 20px;
-  padding: 5px 90px;
-  border-radius: 5px;
-  margin-top: 10px;
+  font-size: 15px;
+  padding: 5px 30px;
+  border-radius: 30px;
+  margin: 20px;
 }
+.price a:hover{background-color: #000;}
 
 
 /* s2____________________________ */
@@ -364,21 +379,48 @@ Header{
 #s2 h2{
   text-align: center;
   margin: 150px 0 150px 0;
-  font-size: 30px;
+  font-size: 40px;
   color: rgb(58, 58, 58);
 }
 .content2{
+  border: 1px solid #000;
   display: flex;
+  width: 1300px;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: auto;
 }
 .items{
+  border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+}
+.item2{
+  border: 1px solid #000;
+  display: inline-block;
+  width: 700px;
+  height: 500px;
+ /*  overflow: hidden; */
+}
+.item2 img:nth-of-type(1){
+  width: 200px;
+  height: 280px;
+}
+.item2:hover img:nth-of-type(1){
+  background: url(../image/img13.jpg);
+  width: 200px;
+  height: 280px;
+}
+.item2 img:nth-of-type(2){
+  width: 200px;
+  height: 280px;
+}
+.item2 img:nth-of-type(3){
+  width: 300px;
+  height: 220px;
 }
 .items ul{
   margin: 20px;
@@ -388,7 +430,7 @@ Header{
   display: inline-block;
 }
 .item2 img{
-  width: 1400px;
+  width: 900px;
   height: 100%;
 }
 
@@ -399,22 +441,24 @@ Header{
 #s3 h2{
   text-align: center;
   margin: 150px 0 150px 0;
-  font-size: 30px;
+  font-size: 40px;
   text-transform: uppercase;
   color: rgb(58, 58, 58);
 }
 .animated-title1{
-  display: flex;
-  width: max-content;
-  height: 100%;
+  margin: 0 0 20px;
+  width: 1300px;
+  height: 380px;
   margin: 100px auto;
+  overflow: hidden;
+  position: relative;
 }
 .ani-img{
-  width: max-content;
   display: flex;
-  margin: auto;
-  overflow: hidden;
-  animation: row1-ani 20s linear infinite;
+  position: absolute;
+  width: 1300px;
+  height: 380px;
+  animation: row1-ani 13s linear infinite alternate;
 }
 .desc{
   display: flex;
@@ -422,29 +466,20 @@ Header{
   align-items: center;
   width: 300px;
   height: 380px;
+  padding: 20px;
   position: relative;
 }
 .desc img{
-  width: inheerit;
+  width: inherit;
   height: inherit;
 }
-.text em{
-  font-family: 'Paperozi';
-  bottom: 0%;
-  right: 0;
-  font-size: 20px;
-  font-style: normal;
+.desc .text{
   position: absolute;
-  z-index: 100;
-  padding: 0 5px 0 5px;
-  margin: 15px;
-  color: #252525;
-  background-color: rgba(173, 170, 170, 0.6);
-  border-radius: 15px;
-  backdrop-filter: blur(6px);
+  
+  background-color: #000;
 }
-.text em:hover{
-  color: #fff;
+.desc:hover .text{
+  opacity: 0.6;
 }
 .ani-img:hover{
   animation-play-state: paused;
@@ -532,8 +567,8 @@ footer nav ul li:not(:first-child){border-left: 1.8px solid #7a7a7a;}
   }
 }
 
-@keyframes row1-ani{  /* 왼쪽으로 흘러감 */
+@keyframes row1-ani{  
   0%{transform: translateX(0);}
-  100%{transform: translateX(-100%);}
+  100%{transform: translateX(-50%);}
 }
 
