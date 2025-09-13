@@ -18,12 +18,6 @@
     font-weight: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'GounBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-}
 
 @font-face {
     font-family: 'Paperozi';
@@ -142,7 +136,7 @@ Header:hover{background-image: url(../image/06.jpg);}
   margin: 320px;
 }
 .txt h2{
-  font-family: 'GounBatang';
+  font-family: 비트로 코어 TTF;
   width: max-content;
   font-size: 100px;
   font-weight: 400;
@@ -383,7 +377,6 @@ Header:hover{background-image: url(../image/06.jpg);}
   color: rgb(58, 58, 58);
 }
 .content2{
-  border: 1px solid #000;
   display: flex;
   width: 1300px;
   justify-content: center;
@@ -392,47 +385,60 @@ Header:hover{background-image: url(../image/06.jpg);}
   margin: auto;
 }
 .items{
-  border: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
-.item2{
+.item2 img{
   border: 1px solid #000;
   display: inline-block;
   width: 700px;
-  height: 500px;
- /*  overflow: hidden; */
+  height: 600px;
 }
 .item2 img:nth-of-type(1){
   width: 200px;
   height: 280px;
 }
-.item2:hover img:nth-of-type(1){
-  background: url(../image/img13.jpg);
+.item2:hover.item2 img{
+  background-image: url(../image/img13.jpg);
   width: 200px;
   height: 280px;
 }
+
 .item2 img:nth-of-type(2){
   width: 200px;
   height: 280px;
 }
 .item2 img:nth-of-type(3){
-  width: 300px;
-  height: 220px;
+  width: 200px;
+  height: 280px;
+}
+.item2 img:nth-of-type(4){
+  width: 610px;
+  height: 320px;
 }
 .items ul{
-  margin: 20px;
-  font-size: 20px;
-}
-.item2{
+  border: 1px solid #000;
   display: inline-block;
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.item2 img{
-  width: 900px;
-  height: 100%;
+.items ul li:nth-of-type(1){
+  font-size: 30px;
+  font-family: 'Paperozi';
+  color: #2c2c2c;
+  margin-bottom: 20px;
 }
+.items ul li:nth-of-type(2),
+.items ul li:nth-of-type(3){
+  font-size: 15px;
+  font-family: 'Paperozi';
+}
+
+
 
 
 /* s3________________________________ */
@@ -457,29 +463,47 @@ Header:hover{background-image: url(../image/06.jpg);}
   display: flex;
   position: absolute;
   width: 1300px;
-  height: 380px;
-  animation: row1-ani 13s linear infinite alternate;
+  height: 400px;
+  animation: row1-ani 20s linear infinite alternate;
 }
 .desc{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 380px;
-  padding: 20px;
+  height: 400px;
+  
   position: relative;
 }
 .desc img{
   width: inherit;
   height: inherit;
 }
-.desc .text{
+.text{
   position: absolute;
-  
-  background-color: #000;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;  
+  opacity: 0;
+  transition: 0.5s;
+}
+.text em{
+  font-family: 'Paperozi';
+  font-style: normal;
+  font-size: 30px;
+  color: #fff;
+  width: max-content;
+  display: flex;
+  margin: 150px auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .desc:hover .text{
-  opacity: 0.6;
+  opacity: 1;
 }
 .ani-img:hover{
   animation-play-state: paused;
